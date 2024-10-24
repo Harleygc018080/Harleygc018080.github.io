@@ -1,125 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Harley Carbonell's portfolio showcasing software development projects, contact information, and links to social profiles.">
-   <title>Harley's Portfolio</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@500;700&display=swap" rel="stylesheet">   
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-   <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harley Carbonell's portfolio showcasing software development projects, contact information, and links to social profiles.">
+    <title>Harley's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
-<body>
-   <header>
-      <nav id="navbar">
-         <ul class="nav-links">
-            <li><a href="#welcome-section" class="nav-link">Welcome</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#tools" class="nav-link">Tools</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-         </ul>
-      </nav>
-   </header>
 
-   <section id="welcome-section">
-      <div class="welcome-content">
-         <div class="welcome-text">
-            <h1>Hello, I'm Harley.</h1>
-            <p>Every Web Developer Helps</p>
-         </div>
-         <div class="welcome-image">
-            <img src="./IMG_5057_3.jpg" alt="Harley's Photo">
-         </div>
-      </div>
-   </section>
-   
+<body class="font-sans bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="#welcome-section">
+                    <img src="logo.png" alt="Harley's Logo" class="h-20 w-auto">
+                </a>
+            </div>
+            <ul class="flex space-x-4 ml-auto">
+                <li><a href="#welcome-section" class="text-lg hover:text-blue-600">Welcome</a></li>
+                <li><a href="#projects" class="text-lg hover:text-blue-600">Projects</a></li>
+                <li><a href="#tools" class="text-lg hover:text-blue-600">Tools</a></li>
+                <li><a href="#contact" class="text-lg hover:text-blue-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-   <section id="projects">
-      <h1>These are my Projects</h1>
-      <div class="projects">
-         <a href="#" class="project-tile">
-            <img src="paper.jpg" alt="Project 1 screenshot">
-            <p><span>&lt;</span>Project1<span>/&gt;</span></p>
-         </a>
-         <a href="#" class="project-tile">
-            <img src="paper.jpg" alt="Project 2 screenshot">
-            <p><span>&lt;</span>Project2<span>/&gt;</span></p>
-         </a>
-         <a href="#" class="project-tile">
-            <img src="paper.jpg" alt="Project 3 screenshot">
-            <p><span>&lt;</span>Project3<span>/&gt;</span></p>
-         </a>
-         <a href="#" class="project-tile">
-            <img src="./paper.jpg" alt="Project 4 screenshot">
-            <p><span>&lt;</span>Project4<span>/&gt;</span></p>
-         </a>
-         <a href="#" class="project-tile">
-            <img src="paper.jpg" alt="Project 5 screenshot">
-            <p><span>&lt;</span>Project5<span>/&gt;</span></p>
-         </a>
-         <a href="#" class="project-tile">
-            <img src="paper.jpg" alt="Project 6 screenshot">
-            <p><span>&lt;</span>Project6<span>/&gt;</span></p>
-         </a>
-      </div>
-      <a href="#" class="show-all">
-         Show All Projects <i class="ri-arrow-right-line"></i>
-      </a>
-   </section>
+    <section id="welcome-section" class="flex flex-col items-center bg-blue-100 py-16 text-center">
+        <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:space-x-8">
+            <div class="lg:w-1/2">
+                <h1 class="text-6xl font-bold text-gray-800">Hello, I'm Harley.</h1>
+                <p class="mt-4 text-xl text-gray-600">Every Web Developer Helps</p>
+            </div>
+            <div class="mt-8 lg:mt-0 lg:w-1/2">
+                <img src="./IMG_5057_3.jpg" alt="Harley's Photo" class="rounded-full mx-auto w-64 h-64 object-cover">
+            </div>
+        </div>
+    </section>
 
-   <section id="tools">
-      <h1>Tools I currently use</h1>
-      <div class="tools">
-         <div class="tool">
-            <i class="ri-html5-fill ri-6x"></i>
-            <p>HTML</p>
-         </div>
-         <div class="tool">
-            <i class="ri-css3-fill ri-6x"></i>
-            <p>CSS</p>
-         </div>
-         <div class="tool">
-            <i class="ri-javascript-fill ri-6x"></i>
-            <p>JavaScript</p>
-         </div>
-         <div class="tool">
-            <i class="ri-database-2-fill ri-6x"></i>
-            <p>MySQL</p>
-         </div>
-      </div>
-   </section>
+    <section id="projects" class="py-16 bg-white">
+        <h1 class="text-4xl font-bold text-center mb-8">These are my Projects</h1>
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="#" class="project-tile bg-gray-100 p-4 rounded-lg hover:text-blue-600 shadow hover:bg-gray-200 transition">
+                <img src="project1image.jpg" alt="Project 1 screenshot" class="rounded mb-4">
+                <p class="text-center text-lg font-semibold"><span>&lt;</span>Quiz App<span>/&gt;</span></p>
+            </a>
+            <a href="#" class="project-tile bg-gray-100 p-4 rounded-lg hover:text-blue-600 shadow hover:bg-gray-200 transition">
+                <img src="paper.jpg" alt="Project 2 screenshot" class="rounded mb-4">
+                <p class="text-center text-lg font-semibold"><span>&lt;</span>Project2<span>/&gt;</span></p>
+            </a>
+            <a href="#" class="project-tile bg-gray-100 p-4 rounded-lg hover:text-blue-600 shadow hover:bg-gray-200 transition">
+                <img src="paper.jpg" alt="Project 3 screenshot" class="rounded mb-4">
+                <p class="text-center text-lg font-semibold"><span>&lt;</span>Project3<span>/&gt;</span></p>
+            </a>
+            <a href="#" class="project-tile bg-gray-100 p-4 rounded-lg hover:text-blue-600 shadow hover:bg-gray-200 transition">
+                <img src="./paper.jpg" alt="Project 4 screenshot" class="rounded mb-4">
+                <p class="text-center text-lg font-semibold"><span>&lt;</span>Project4<span>/&gt;</span></p>
+            </a>
+            <a href="#" class="project-tile bg-gray-100 p-4 rounded-lg hover:text-blue-600 shadow hover:bg-gray-200 transition">
+                <img src="paper.jpg" alt="Project 5 screenshot" class="rounded mb-4">
+                <p class="text-center text-lg font-semibold"><span>&lt;</span>Project5<span>/&gt;</span></p>
+            </a>
+            <a href="#" class="project-tile bg-gray-100 p-4 rounded-lg hover:text-blue-600 shadow hover:bg-gray-200 transition">
+                <img src="paper.jpg" alt="Project 6 screenshot" class="rounded mb-4">
+                <p class="text-center text-lg font-semibold"><span>&lt;</span>Project6<span>/&gt;</span></p>
+            </a>
+        </div>
+        <div class="text-center mt-8">
+            <a href="#" class="text-blue-600 text-lg font-medium hover:underline">
+                Show All Projects <i class="ri-arrow-right-line"></i>
+            </a>
+        </div>
+    </section>
 
-   <section id="contact">
-      <h1>Let's collaborate...</h1>
-      <p class="coffee-question">How do you take your coffee?</p>
-      <div class="social-medias">
-         <a href="https://www.facebook.com/NeverMindHarley/" target="_blank" class="social-media">
-            <i class="ri-facebook-box-fill ri-3x" aria-label="Facebook"></i>
-            <p>Facebook</p>
-         </a>
-         <a href="https://www.linkedin.com/in/harleycarbonell/" target="_blank" class="social-media">
-            <i class="ri-linkedin-box-fill ri-3x" aria-label="LinkedIn"></i>
-            <p>LinkedIn</p>
-         </a>
-         <a href="https://github.com/Harleygc018080" target="_blank" class="social-media" id="profile-link">
-            <i class="ri-github-fill ri-3x" aria-label="GitHub"></i>
-            <p>GitHub</p>
-         </a>
-         <a href="mailto:harleycarbonell@example.com" class="social-media">
-            <i class="ri-mail-send-fill ri-3x" aria-label="Email"></i>
-            <p>Email</p>
-         </a>
-         <a href="tel:+1234567890" class="social-media">
-            <i class="ri-smartphone-fill ri-3x" aria-label="Phone"></i>
-            <p>Call Me</p>
-         </a>
-      </div>
-   </section>
+    <section id="tools" class="py-16 bg-blue-50">
+        <h1 class="text-4xl font-bold text-center mb-8">Tools I currently use</h1>
+        <div class="container mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+            <div class="tool">
+                <i class="ri-html5-fill" style="font-size: 6rem; color: #e34f26;"></i>
+            </div>
+            <div class="tool">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS Logo" class="h-full w-24 mx-auto">
+            </div>
+            <div class="tool">
+                <i class="ri-javascript-fill" style="font-size: 6rem; color: #f7df1e;"></i>
+            </div>
+            <div class="tool">
+                <i class="ri-database-2-fill" style="font-size: 6rem; color: #00a300;"></i>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-16 bg-white">
+        <h1 class="text-4xl font-bold text-center mb-4">Let's collaborate...</h1>
+        <p class="text-center text-lg mb-8 text-gray-600">How do you take your coffee?</p>
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+            <a href="https://www.facebook.com/NeverMindHarley/" target="_blank" class="social-media">
+                <i class="ri-facebook-box-fill ri-6x text-blue-600"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/harleycarbonell/" target="_blank" class="social-media">
+                <i class="ri-linkedin-box-fill ri-6x text-blue-500"></i>
+            </a>
+            <a href="https://github.com/Harleygc018080" target="_blank" class="social-media" id="profile-link">
+                <i class="ri-github-fill ri-6x text-gray-800"></i>
+            </a>
+            <a href="mailto:harleycarbonell@example.com" class="social-media">
+                <i class="ri-mail-send-fill ri-6x text-red-500"></i>
+            </a>
+            <a href="tel:+639177094346" class="social-media">
+                <i class="ri-smartphone-fill ri-6x text-green-600"></i>
+            </a>
+            <div class="text-center mt-8">
+                <a href="./CV Carbonell.pdf" download class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+                    Download My CV
+                </a>
+            </div>
+        </div>
+    </section>
 
-   <footer>
-      <p>Created by Harley Carbonell &bull; July 2024</p>
-   </footer>
+    <footer class="py-4 bg-gray-800 text-center text-white">
+        <p>Created by Harley Carbonell &bull; July 2024</p>
+    </footer>
 </body>
+
 </html>
